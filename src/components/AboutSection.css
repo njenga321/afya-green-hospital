@@ -1,0 +1,42 @@
+.about-section {
+    height: 100vh;
+    background-image: url('../../public/doctorandkid.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--pri-color);
+    overflow: hidden;
+}
+.about-section .container {
+    height: 100%;
+}
+.about-section-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.about-section-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.about-section-content h4{
+    font-weight: 700;
+    color: var(--pri-color);
+    border-bottom: 1px solid var(--white-color);
+}
+.about-section-content h2 {
+    margin-top: 10px;
+    color: var(--white-color);
+}
+.about-section-content p {
+    font-size: 17px;
+    color: white;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .about-section {
+        overflow-y: scroll;
+    }
+}

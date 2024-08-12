@@ -1,0 +1,22 @@
+.partners{
+    margin: 10px 0;
+}
+
+.partners .swiper {
+    width: 100%;
+    height: 123px;
+  }
+  
+  .partners .swiper-slide {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .partners .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

@@ -14,6 +14,8 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .schedule .single-schedule {
@@ -127,5 +129,6 @@
     }
     .schedule .single-schedule {
         margin: 15px 0;
+        width: 90vw;
     }
 }

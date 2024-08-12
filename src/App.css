@@ -9,9 +9,14 @@
 :root{
   --pri-color:#066940;
   --sec-color:#113B08;
+  --white-color:#ffffff;
+  --black-color:#000000;
 }
 
-
+.title-h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
 p {
   color: #757575;
   margin: 0;
