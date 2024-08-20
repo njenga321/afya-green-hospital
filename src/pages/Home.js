@@ -1,9 +1,10 @@
 import React from 'react'
 import HeroSlider from '../components/sliders/HeroSlider'
 import HeroInfoCards from '../components/cards/HeroInfoCards'
-import Features from '../components/Features'
-import AboutSection from '../components/AboutSection'
+import Features from '../components/sections/Features'
+import AboutSection from '../components/sections/AboutSection'
 import Partners from '../components/sliders/Partners'
+import ContactSection from '../components/sections/ContactSection'
 
 function Home() {
   return (
@@ -17,7 +18,10 @@ function Home() {
     
     <AboutSection />
 
+    <ContactSection />
+
     <Partners />
+  
 
     </>
   )

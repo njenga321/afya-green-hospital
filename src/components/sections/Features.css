@@ -38,7 +38,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 99;
     position: absolute;
 }
 
@@ -96,7 +96,7 @@
     opacity: 0.8;
 }
 .feature-card .card_bg{
-    background: url('../../public/stethoscope\ .jpeg');
+    background: url('../../../public/stethoscope\ .jpeg');
     background-color: var(--pri-color);
     background-size: cover;
     height: 100%;
