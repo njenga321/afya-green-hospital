@@ -11,21 +11,48 @@
   --sec-color:#113B08;
   --white-color:#ffffff;
   --black-color:#000000;
+  --dark-color: #0c0c0c;
+}
+section {
+  padding: 50px 0;
 }
 
 .title-h2 {
   font-size: 38px;
   font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
 }
-@media only screen and (max-width: 320px) {
+
+.title-h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30%; 
+  height: 4px; 
+  background-color: var(--pri-color); 
+  transition: width 0.3s ease-in-out; 
+}
+
+section:hover .title-h2::after {
+  width: 70%; 
+}
+
+@media only screen and (max-width: 480px) {
   .title-h2 {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
+  }
+  p {
+    font-size: 14px;
   }
 }
 p {
   color: #757575;
   margin: 0;
+  font-size: 17px;
   line-height: 24px;
   font-weight: 400;
 }

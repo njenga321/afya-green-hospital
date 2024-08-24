@@ -38,6 +38,16 @@ function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowServicesDropdown(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowServicesDropdown(false);
+  };
   return (
     <>
       <div className="header-top-bar">
@@ -111,41 +121,49 @@ function Header() {
         </div>
       </div>
 
+    
       <div className="header-nav">
-        <Navbar expand="lg" className={`navbar-custom ${isSticky ? 'nav-sticky' : ''}`} activeKey={activeKey} onSelect={handleSelect}>
-          <Container>
-            <Navbar.Brand href="#home" className="brand-logo" onClick={handleLogoClick}>
-              Afya Green Hospital
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav">
-              <CgMenuRightAlt className="custom-toggler-icon" />
-            </Navbar.Toggle>
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto nav-space-around" activeKey={activeKey} onSelect={handleSelect}>
-                <Nav.Link eventKey="home" href="#home">Home</Nav.Link>
-                <Nav.Link eventKey="about" href="#About">About us</Nav.Link>
-                <NavDropdown title="Services" 
-                  id="basic-nav-dropdown"
-                  aria-haspopup="true"
-                  active={activeKey.startsWith('services')}
-                  className="custom-dropdown"
-                  >
-                    
-                  <NavDropdown.Item eventKey="services/inpatient" href="#action/3.1">Inpatient</NavDropdown.Item>
-                  <NavDropdown.Item eventKey="services/outpatient" href="#action/3.2">Outpatient</NavDropdown.Item>
-                  <NavDropdown.Item eventKey="services/something" href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item eventKey="services/separated" href="#action/3.4">Separated link</NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link eventKey="enquiries" href="#Enquiry">Enquiries</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-            <div className="cta-btn">
-              <a className="item-btn" href="">Make an Appointment</a>
-            </div>
-          </Container>
-        </Navbar>
-      </div>
+      <Navbar expand="lg" className={`navbar-custom ${isSticky ? 'nav-sticky' : ''}`} activeKey={activeKey} onSelect={handleSelect}>
+        <Container>
+          <Navbar.Brand href="#home" className="brand-logo" onClick={handleLogoClick}>
+            <img src="./agh.png" height={60}/>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <CgMenuRightAlt className="custom-toggler-icon" />
+          </Navbar.Toggle>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto nav-space-around" activeKey={activeKey} onSelect={handleSelect}>
+              <Nav.Link eventKey="home" href="#about">Who We Are</Nav.Link>
+              <Nav.Link eventKey="features" href="#features">Why us</Nav.Link>
+
+              {/* Custom Services Dropdown */}
+              <Nav.Link
+                eventKey="services"
+                href="#services"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                className="services-nav-link"
+              >
+                Services
+                {showServicesDropdown && (
+                  <div className="custom-dropdown-menu">
+                    <Nav.Link eventKey="services/inpatient" href="#action/3.1">Inpatient</Nav.Link>
+                    <Nav.Link eventKey="services/outpatient" href="#action/3.2">Outpatient</Nav.Link>
+                    <Nav.Link eventKey="services/something" href="#action/3.3">Something</Nav.Link>
+                    <Nav.Link eventKey="services/separated" href="#action/3.4">Separated link</Nav.Link>
+                  </div>
+                )}
+              </Nav.Link>
+              <Nav.Link eventKey="partners" href="#partners">Partners</Nav.Link>
+              <Nav.Link eventKey="enquiries" href="#contact">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+          <div className="cta-btn">
+            <a className="item-btn" href="">Make an Appointment</a>
+          </div>
+        </Container>
+      </Navbar>
+    </div>
     </>
   );
 }

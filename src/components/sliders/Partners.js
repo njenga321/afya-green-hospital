@@ -10,15 +10,18 @@ import './Partners.css';
 
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
+import SlideMotion from '../animations/SlideMotion';
 
 function Partners() {
   return (
     <>
     <section className="partners">
         <div className="container">
-            <div className="partners-title">
-                <h2 className='title-h2'>Our Partners</h2>
-            </div>
+            <SlideMotion delay={0.3} direction='right'>
+                <div className="partners-title">
+                    <h2 className='title-h2'>Our Partners</h2>
+                </div>
+            </SlideMotion>
       <Swiper
         spaceBetween={30}
         centeredSlides={false}

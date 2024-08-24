@@ -14,31 +14,31 @@ import { Pagination, Autoplay } from 'swiper/modules';
 const slidesData = [
   {
     image:'https://images.unsplash.com/photo-1638598124048-10c5b3f2f964?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
-    title: 'DISCOVER',
-    description: 'This is the first slide',
-    button: 'Button 1',
-    buttonLink: 'https://example.com/button1',
+    title: 'A Legacy of Care',
+    description: 'Building on years of experience, we offer compassionate and comprehensive healthcare for every generation.',
+    button: 'Learn More',
+    buttonLink: '#who-we-are',
   },
   {
     image:'https://images.unsplash.com/photo-1599045118108-bf9954418b76?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
-    title: 'DISCOVER',
-    description: 'This is the second slide',
-    button: 'Button 1',
-    buttonLink: 'https://example.com/button1',
+    title: 'Advanced Medicine',
+    description: 'Where cutting-edge technology meets personalized attention. Healing with empathy, expertise, and excellence.',
+    button: 'Learn More',
+    buttonLink: '#who-we-are',
   },
   {
     image:'./afya2.jpg', 
-    title: 'DISCOVER',
-    description: 'This is the third slide',
-    button: 'Button 1',
-    buttonLink: 'https://example.com/button1',
+    title: 'Clinical Excellence',
+    description: 'Our experienced medical team is dedicated to providing the highest level of care, tailored to your individual needs.',
+    button: 'Learn More',
+    buttonLink: '#who-we-are',
   },
   {
     image:'./afya.jpg', 
-    title: 'DISCOVER',
-    description: 'This is the fourth slide',
-    button: 'Button 1',
-    buttonLink: 'https://example.com/button1',
+    title: 'Healing with Integrity',
+    description: 'We are committed to delivering compassionate care with a focus on safety, dignity, and respect for every patient.',
+    button: 'Learn More',
+    buttonLink: '#who-we-are',
   },
   
 ];
@@ -52,10 +52,8 @@ export default function Carousel() {
   return (
     <>
       <Swiper
-        direction={'vertical'}
-        pagination={{
-          clickable: true,
-        }}
+        direction={'horizontal'}
+        pagination={false}
         parallax={true}
         loop={true}
         modules={[Pagination, Autoplay]} // Include Autoplay module
@@ -65,17 +63,21 @@ export default function Carousel() {
           disableOnInteraction: false, // Keep playing after user interaction
         }}
       >
+        
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index} className="swiper-slide">
-          <div className="slide-content" style={{ backgroundImage: `url(${slide.image})`}}>
-          <div className="blur-overlay"></div>
-            <div className='slide-description'>
-              <p className='animate-text'>{slide.description}</p>
-              <button className='animate-button' href={slide.buttonLink} target="_blank" rel="noopener noreferrer">
-                {slide.button}
-              </button>
+            <div className="slide-content" style={{ backgroundImage: `url(${slide.image})`}}>
+              <div className="blur-overlay"></div>
+                <div className='container'>
+                  <div className='slide-description'>
+                    <h2 className='animate-title title-h2' data-swiper-parallax="-100">{slide.title}</h2>
+                    <p className='animate-text' data-swiper-parallax="-100">{slide.description}</p>
+                    <button className='animate-button item-btn' data-swiper-parallax="-200" href={slide.buttonLink} target="_blank" rel="noopener noreferrer">
+                      {slide.button}
+                    </button>
+                  </div>
+                </div>
             </div>
-          </div>
           </SwiperSlide>
         ))}
       </Swiper>

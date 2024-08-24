@@ -5,6 +5,7 @@ import Features from '../components/sections/Features'
 import AboutSection from '../components/sections/AboutSection'
 import Partners from '../components/sliders/Partners'
 import ContactSection from '../components/sections/ContactSection'
+import WhyUs from '../components/sections/WhyUs'
 
 function Home() {
   return (
@@ -13,6 +14,8 @@ function Home() {
     <HeroSlider />
 
     <HeroInfoCards />
+
+    <WhyUs />
 
     <Features />
     

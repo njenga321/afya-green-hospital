@@ -1,13 +1,5 @@
 .schedule {
     background: #fff;
-    margin: 0;
-    padding: 0;
-    height: 230px;
-}
-.schedule .schedule-inner {
-    position: relative;
-    transform: translateY(-50%);
-    z-index: 9;
 }
 .schedule .row {
     display: -ms-flexbox;
@@ -53,7 +45,7 @@
     visibility: visible;
     opacity: 0.2;
     right: -25px;
-    bottom: -75px;
+    bottom: -55px;
 }
 .schedule .single-schedule span {
     display: block;
@@ -89,24 +81,29 @@
     align-items: flex-end;
 }
 .schedule .single-schedule a {
-    color: hwb(0 100% 0%);
+    color: var(--white-color);
     margin-top: 25px;
     font-weight: 500;
     display: inline-block;
     position: relative;
-}
-.schedule .single-schedule a:before {
+    text-decoration: none;
+  }
+  
+  .schedule .single-schedule a::after {
+    content: '';
     position: absolute;
-    content: "";
     left: 0;
-    bottom: 0;
+    bottom: -2px;
+    width: 0;
     height: 1px;
-    width: 0%;
-    background: #fff;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
+    background-color: var(--white-color);
+    transition: width 0.3s ease;
+  }
+  
+  .schedule .single-schedule a:hover::after {
+    width: 100%;
+  }
+  
 .schedule .single-schedule a i {
     margin-left: 10px;
 }
@@ -115,7 +112,7 @@
 
 
 /* Tablet */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .schedule {
         background: #fff;
         margin: 0;
@@ -126,9 +123,10 @@
     }
     .schedule .schedule-inner {
         transform: none;
+        width: 100%;
     }
     .schedule .single-schedule {
         margin: 15px 0;
-        width: 90vw;
+        width: 100%;
     }
 }

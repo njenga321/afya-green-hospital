@@ -1,5 +1,4 @@
 .ContactSection {
-    position: relative;
     background-color: var(--pri-color);
 }
 .ContactSection img {
@@ -12,14 +11,14 @@
     opacity: 0.2;
 }
 .ContactSection .cta-box {
-    text-align: center;
-    z-index: 2;
-    position: relative;
-    margin: 100px 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  height: 100%;
 }
 .ContactSection .cta-box p.item-sub-title {
-    font-size: 17px;
-    font-weight: 400;
     color: #fff;
     margin-bottom: 8px;
 }
@@ -46,6 +45,190 @@
     margin-bottom: 8px;
 }
 
-@media only screen and (max-width: 767px) {
 
+
+/* Form */
+
+.contact-form, ::after, ::before {
+    box-sizing: border-box;
+  }
+
+.contact-form  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form .form-item,
+.contact-form .textarea-div {
+	opacity: 0;
+}
+
+.contact-form .form-item1 {
+	animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .3s 1 slide-up2 ;
+  animation-fill-mode: forwards;
+}
+
+.contact-form .form-item2 {
+	animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .4s 1 slide-up2 ;
+  animation-fill-mode: forwards;
+}
+
+.contact-form .form-item3 {
+	animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .5s 1 slide-up2 ;
+  animation-fill-mode: forwards;
+}
+
+.contact-form .form-item4 {
+	animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .6s 1 slide-up2 ;
+  animation-fill-mode: forwards;
+}
+
+.ContactSection form {
+	background-color: var(--dark-color);
+	border-radius: 3px;
+	padding: 1.5em;
+  width: 100%;
+	animation: 1s cubic-bezier(0.47, 0, 0.745, 0.715) .7s 1;
+	animation-fill-mode: forwards;
+}
+
+.contact-form  label {
+	color: var(--white-color);
+}
+
+.contact-form option, select, input, .textarea-div textarea {
+  background: #1b1a1a;
+  color: rgb(255, 229, 195);
+}
+
+.contact-form .form-header {
+	text-align: center;
+	font-size: 28px;
+	padding: 0;
+	margin-bottom: 1.25em;
+	color: var(--pri-color)	;
+}
+
+.contact-form label {
+	display: block;
+	margin-bottom: 0.35em;
+	margin-top: 0.35em;
+}
+
+.contact-form input:not(.btn), select {
+	padding: 0.625em 1em;
+	width: 100%;
+	outline: 0;
+	margin-bottom: 1.25em;
+	border-radius: 3px;
+	border: 0;
+}
+
+.contact-form .textarea-div {
+	width: 100%;
+}
+
+.contact-form textarea {
+	padding: 10px;
+	width: 100%;
+	outline: 0;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 0;
+	font-size: 14px;
+	height: 100px;
+}
+
+.contact-form .btn-container {
+  margin: auto;
+  padding-bottom: 1em;
+}
+
+.contact-form .btn-container .item-btn {
+    background-color: transparent;
+}
+.contact-form .btn-container .item-btn:hover {
+    background-color: var(--white-color);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus  {
+	color: rgb(255, 229, 195);
+  border:  1px solid var(--white-color);
+}
+.contact-form .error-message {
+    color: red;
+}
+
+@media only screen and (min-width: 768px) {
+	.contact-form .form {
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	}
+	
+	/* .contact-form .form-item {
+		width: 45%;
+	} */
+
+	/* .contact-form  {
+		padding: 5em 0;
+        width: 80%;
+  } */
+}
+
+@media only screen and (max-width: 768px) {
+  .cta-box {
+    height: max-content;
+  }
+    .contact-form {
+		/* padding: 8em 0;
+    width: 70%; */
+  }
+}
+
+@keyframes slide-up2 {
+    0% {
+        transform: translateY(.5em);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glow-load {
+    0% {
+        box--shadow: none;
+  }
+  100%{
+      box-shadow:
+          0px 0px 50px #f0860c;
+  }
+}
+
+@keyframes continuous-glow {
+  0% {
+  box-shadow: 0 0 5px rgba(255, 157, 9, 0.39), inset 0 0 5px rgba(255, 153, 0, 0.356), 0 2px 0 #000;
+  }	
+  100% {
+  box-shadow: 0 0 20px rgba(255, 153, 0, 0.6), inset 0 0 10px rgba(255, 145, 0, 0.4), 0 2px 0 #000;
+  }
+}
+
+@keyframes blur-load {
+  0% {
+      opacity: 0;
+      filter:blur(0.2em);
+  }
+  100%{
+      opacity: 1;
+      filter:blur(0);
+  }
 }

@@ -1,6 +1,4 @@
 .features {
-    margin: 0;
-    padding: 0;
     height: max-content;
     background-color: #fff;
 }
@@ -58,16 +56,16 @@
 }
 .feature-info h2 {
     color: #000000;
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 26px;
     text-align: center;
     width: 100%;
     margin-top: -10px;
 }
+.feature-info h2::after {
+    content: none;
+}
 .feature-info p {
     color: #000000;
-    font-size: 17px;
-    font-weight: normal;
     text-align: center;
 }
 .feature-card:hover .feature-info h2,
@@ -107,3 +105,28 @@
     margin-top: 0px;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .features .row {
+        gap: 30px;
+    }
+.feature-card {
+    height: 300px;
+}
+.feature-card .card_bg_image {
+    background-size: cover;
+    margin-top: 0px;
+}
+.feature-card .feature-info h2,
+.feature-card .feature-info p,
+.feature-card .feature-info i {
+    color: white;
+    transition: 1.4s ease-in-out;
+}
+.feature-info h2 {
+    font-size: 18px;
+}
+.feature-info i {
+    font-size: 60px;
+}
+}
