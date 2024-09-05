@@ -4,7 +4,7 @@ import SlideMotion from '../animations/SlideMotion'
 
 function AboutSection() {
   return (
-    <section className='about-section' id='who-we-are'>
+    <section className='about-section' id='about'>
         <div className='container'>
             <div className='about-section-content'>
                 <div className='col-lg-6 col-12'>

@@ -3,9 +3,10 @@ import './Header.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FaEnvelope, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaRss, FaTwitter } from 'react-icons/fa';
 import { CgMenuRightAlt } from 'react-icons/cg';
+import { Link as ScrollLink } from 'react-scroll';
+
 
 function Header() {
   const [activeKey, setActiveKey] = useState('');
@@ -125,37 +126,21 @@ function Header() {
       <div className="header-nav">
       <Navbar expand="lg" className={`navbar-custom ${isSticky ? 'nav-sticky' : ''}`} activeKey={activeKey} onSelect={handleSelect}>
         <Container>
-          <Navbar.Brand href="#home" className="brand-logo" onClick={handleLogoClick}>
-            <img src="./agh.png" height={60}/>
-          </Navbar.Brand>
+        <div className="trapezium-wrapper">
+        <Navbar.Brand href="#home" className="brand-logo" onClick={handleLogoClick}>
+          <img src="./agh.png" alt="Logo" className="logo" />
+        </Navbar.Brand>
+      </div>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <CgMenuRightAlt className="custom-toggler-icon" />
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto nav-space-around" activeKey={activeKey} onSelect={handleSelect}>
-              <Nav.Link eventKey="home" href="#about">Who We Are</Nav.Link>
-              <Nav.Link eventKey="features" href="#features">Why us</Nav.Link>
-
-              {/* Custom Services Dropdown */}
-              <Nav.Link
-                eventKey="services"
-                href="#services"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                className="services-nav-link"
-              >
-                Services
-                {showServicesDropdown && (
-                  <div className="custom-dropdown-menu">
-                    <Nav.Link eventKey="services/inpatient" href="#action/3.1">Inpatient</Nav.Link>
-                    <Nav.Link eventKey="services/outpatient" href="#action/3.2">Outpatient</Nav.Link>
-                    <Nav.Link eventKey="services/something" href="#action/3.3">Something</Nav.Link>
-                    <Nav.Link eventKey="services/separated" href="#action/3.4">Separated link</Nav.Link>
-                  </div>
-                )}
-              </Nav.Link>
-              <Nav.Link eventKey="partners" href="#partners">Partners</Nav.Link>
-              <Nav.Link eventKey="enquiries" href="#contact">Contact</Nav.Link>
+              <Nav.Link><ScrollLink to="hero-slider" smooth={true} duration={500}>Home</ScrollLink></Nav.Link>
+              <Nav.Link><ScrollLink to="why-us" smooth={true} duration={500}>Why Us</ScrollLink></Nav.Link>
+              <Nav.Link><ScrollLink to="services" smooth={true} duration={500}>Services</ScrollLink></Nav.Link>
+              <Nav.Link ><ScrollLink to="partners" smooth={true} duration={500}>Partners</ScrollLink></Nav.Link>
+              <Nav.Link ><ScrollLink to="contact" smooth={true} duration={500}>Contact</ScrollLink></Nav.Link>
             </Nav>
           </Navbar.Collapse>
           <div className="cta-btn">

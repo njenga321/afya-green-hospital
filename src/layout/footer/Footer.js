@@ -40,9 +40,9 @@ function Footer() {
                         </div>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </SlideMotion>
                 </div>
@@ -53,7 +53,7 @@ function Footer() {
                             <h4>More Info</h4>
                         </div>
                         <ul>
-                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#services">Who We Are</a></li>
                             <li><a href="#">Message From CEO</a></li>
                             <li><a href="#">Specialist Clinics</a></li>
                             <li><a href="#">Book Appointment</a></li>

@@ -4,6 +4,7 @@
   font-weight: 400;
   font-size: 14px;
   color: #888;
+  scroll-behavior: smooth;
 }
 
 :root{

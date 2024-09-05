@@ -7,7 +7,7 @@ import SlideMotion from '../animations/SlideMotion';
 
 function Features() {
   return (
-    <section className='features'>
+    <section className='features' id='services'>
       <div className='container'>
         <div className='row'>
           <div className='features-title'>
