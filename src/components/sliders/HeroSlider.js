@@ -58,6 +58,7 @@ export default function Carousel() {
         loop={true}
         modules={[Pagination, Autoplay]} // Include Autoplay module
         className="mySwiper"
+        id='home'
         autoplay={{
           delay: 4000, // Change slide every 3 seconds
           disableOnInteraction: false, // Keep playing after user interaction

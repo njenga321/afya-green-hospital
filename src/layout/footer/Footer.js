@@ -28,7 +28,7 @@ function Footer() {
                         </li> 
                     </ul>
                     <div className="cta-btn">
-                        <a className="item-btn" href="">Make an Appointment</a>
+                        <a className="item-btn" href="#contact">Make an Appointment</a>
                     </div>
                 </SlideMotion>
                 </div>

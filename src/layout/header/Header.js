@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FaEnvelope, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaRss, FaTwitter } from 'react-icons/fa';
 import { CgMenuRightAlt } from 'react-icons/cg';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -40,15 +41,6 @@ function Header() {
     };
   }, []);
 
-  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
-
-  const handleMouseEnter = () => {
-    setShowServicesDropdown(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowServicesDropdown(false);
-  };
   return (
     <>
       <div className="header-top-bar">
@@ -64,10 +56,12 @@ function Header() {
                   <i><FaEnvelope /></i>
                   info@afyagreenhospital.org
                 </li>
+                <Link to='https://maps.app.goo.gl/wyHdrt2gEgzJ2z6BA'>
                 <li>
                   <i><FaMapMarkerAlt /></i>
                   Find our Location
                 </li>
+                </Link>
               </ul>
             </div>
             <div className="topbar-right-content">
@@ -136,7 +130,7 @@ function Header() {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto nav-space-around" activeKey={activeKey} onSelect={handleSelect}>
-              <Nav.Link><ScrollLink to="hero-slider" smooth={true} duration={500}>Home</ScrollLink></Nav.Link>
+              <Nav.Link><ScrollLink to="home" smooth={true} duration={500}>Home</ScrollLink></Nav.Link>
               <Nav.Link><ScrollLink to="why-us" smooth={true} duration={500}>Why Us</ScrollLink></Nav.Link>
               <Nav.Link><ScrollLink to="services" smooth={true} duration={500}>Services</ScrollLink></Nav.Link>
               <Nav.Link ><ScrollLink to="partners" smooth={true} duration={500}>Partners</ScrollLink></Nav.Link>
@@ -144,7 +138,7 @@ function Header() {
             </Nav>
           </Navbar.Collapse>
           <div className="cta-btn">
-            <a className="item-btn" href="">Make an Appointment</a>
+            <a className="item-btn" href="#contact">Make an Appointment</a>
           </div>
         </Container>
       </Navbar>

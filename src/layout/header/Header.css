@@ -32,6 +32,8 @@
   position: relative;
   padding: 10px 0;
   margin-left: 20px;
+  text-decoration: none;
+  color: var(--pri-color);
 }
 
 .top-contact li i {
@@ -91,7 +93,25 @@
     transition: 0.5s ease-in-out, top 0.3s ease-in-out;
     
 }
-
+.nav-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav-sticky .nav-space-around a {
+  color: var(--pri-color);
+}
+.nav-sticky .item-btn {
+  border-color: var(--pri-color);
+  color: var(--pri-color);
+}
+.nav-sticky .navbar-nav >a::before, .nav-sticky .navbar-nav >a::after {
+  background-color: var(--pri-color);
+}
 .header-nav .item-btn {
   margin-left: 10px !important;
 }

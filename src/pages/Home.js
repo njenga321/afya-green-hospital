@@ -16,7 +16,7 @@ function Home() {
       <FloatingWhatsApp
         phoneNumber='+254726990825' 
         accountName='Afya Green Hospital'
-        avatar='/agh.png' 
+        avatar='/profile-avatar.png' 
         initialMessageByServer='Hi there! How can I assist you?' 
         statusMessage='Online' 
         notificationClassName='floating-whatsapp-notification'
