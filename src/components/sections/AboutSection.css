@@ -1,11 +1,10 @@
 .about-section {
-    height: 100vh;
+    height: max-content;
     background-image: url('../../../public/doctorandkid.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--pri-color);
-    overflow: hidden;
 }
 .about-section .container {
     height: 100%;
@@ -29,12 +28,19 @@
 .about-section-content p {
     color: var(--blacl-color);
 }
+.about-section p {
+    display: block;
+  }
+  
+  .read-more {
+    display: none;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 
 @media only screen and (max-width: 767px) {
-    .about-section {
-        overflow-y: scroll;
-    }
     .about-section-inner{
         background-color: transparent;
         color: var(--white-color);
@@ -46,3 +52,14 @@
         display: block;
     }
 }
+@media (max-width: 480px) { /* Target mobile devices */
+    .about-section p:first-of-type {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+  
+    .read-more {
+      display: inline-block;
+    }
+  }
