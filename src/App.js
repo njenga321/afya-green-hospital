@@ -1,24 +1,65 @@
+import React, { Suspense, lazy, useEffect } from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Doctors = lazy(() => import('./pages/Doctors'));
+const Appointments = lazy(() => import('./pages/Appointments'));
+const Emergency = lazy(() => import('./pages/Emergency'));
+const Contact = lazy(() => import('./pages/Contact'));
+const HealthPackages = lazy(() => import('./pages/HealthPackages'));
+const Blog = lazy(() => import('./pages/Blog'));
+const PatientPortal = lazy(() => import('./pages/PatientPortal'));
+const Telemedicine = lazy(() => import('./pages/Telemedicine'));
+const Careers = lazy(() => import('./pages/Careers'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
-import Home from './pages/Home';
-import Header from './layout/header/Header';
-import Footer from './layout/footer/Footer';
+function PageLoader() {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <div className="flex flex-col items-center gap-4">
+        <div className="w-12 h-12 border-4 border-green-200 border-t-green-600 rounded-full animate-spin" />
+        <p className="text-green-700 font-semibold text-sm">Loading...</p>
+      </div>
+    </div>
+  );
+}
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }); }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
     <Router>
-      <div className="app">
+      <ScrollToTop />
+      <div className="flex flex-col min-h-screen">
         <Header />
-        
-        <Routes>
-          <Route index path="/" element={<Home />} />
-          
-        </Routes>
-        
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/:serviceId" element={<Services />} />
+            <Route path="/doctors" element={<Doctors />} />
+            <Route path="/appointments" element={<Appointments />} />
+            <Route path="/emergency" element={<Emergency />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/health-packages" element={<HealthPackages />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<Blog />} />
+            <Route path="/patient-portal" element={<PatientPortal />} />
+            <Route path="/telemedicine" element={<Telemedicine />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
         <Footer />
       </div>
     </Router>

@@ -1,0 +1,602 @@
+Use this as a master prompt in Replit AI. It is designed to transform an older React project into a premium, modern hospital web application rather than simply redesigning pages.
+
+---
+
+# Afya Green Hospital - Enterprise Healthcare Platform Rebuild
+
+You are a senior product designer, UX architect, healthcare software engineer, and React modernization expert.
+
+I have imported an existing ReactJS repository for **Afya Green Hospital**. Analyze the current codebase and use it as a foundation where possible, but do not be constrained by the old design, architecture, components, styling, or user experience.
+
+The goal is to transform the application into a **modern, premium, enterprise-grade healthcare platform** that feels comparable to leading global healthcare providers and modern SaaS products.
+
+---
+
+## Primary Objective
+
+Create a:
+
+* Modern
+* Sleek
+* Premium
+* Fast
+* Responsive
+* Accessible
+* Mobile-first
+* SEO-friendly
+* Production-ready
+
+hospital website and patient experience platform.
+
+The design should feel like a combination of:
+
+* World-class private hospitals
+* Modern healthcare startups
+* Apple-level simplicity
+* Stripe-level polish
+* Modern SaaS dashboards
+
+Avoid outdated hospital website designs.
+
+---
+
+# Technical Modernization
+
+## Upgrade Architecture
+
+Review existing code and:
+
+* Refactor outdated React patterns
+* Remove dead code
+* Improve folder structure
+* Improve component reusability
+* Improve performance
+* Improve maintainability
+
+Recommended stack:
+
+* React 18+
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* React Router
+* React Query / TanStack Query
+* Zustand or Context API
+* React Hook Form
+* Zod validation
+* Lucide Icons
+
+Implement:
+
+* Lazy loading
+* Code splitting
+* SEO optimization
+* Accessibility standards
+* Lighthouse optimization
+
+Target:
+
+* Lighthouse score 95+
+
+---
+
+# Design System
+
+Create a complete design system.
+
+## Brand Personality
+
+Afya Green Hospital should communicate:
+
+* Trust
+* Excellence
+* Compassion
+* Innovation
+* Professionalism
+* Care
+
+## Design Style
+
+Modern luxury healthcare.
+
+Characteristics:
+
+* Spacious layouts
+* Glassmorphism accents
+* Soft shadows
+* Clean typography
+* Premium cards
+* Smooth animations
+* Elegant gradients
+* Professional imagery
+
+Avoid:
+
+* Generic bootstrap look
+* Outdated hospital templates
+* Cluttered layouts
+
+---
+
+# Color System
+
+Primary:
+
+* Medical Green
+* Emerald Green
+
+Secondary:
+
+* Deep Teal
+* Soft Blue
+
+Accent:
+
+* Gold highlights for premium feel
+
+Neutrals:
+
+* White
+* Off-white
+* Light gray
+* Dark charcoal
+
+Use modern healthcare color psychology.
+
+---
+
+# Typography
+
+Use modern web fonts:
+
+Headings:
+
+* Inter
+* Plus Jakarta Sans
+
+Body:
+
+* Inter
+
+Large typography hierarchy.
+
+Clean spacing.
+
+---
+
+# Global UI Features
+
+Implement:
+
+* Smooth page transitions
+* Scroll animations
+* Micro-interactions
+* Hover effects
+* Skeleton loaders
+* Floating CTA buttons
+* Sticky navigation
+* Mobile navigation drawer
+* Smart breadcrumbs
+* Search functionality
+
+---
+
+# Homepage
+
+Create a premium homepage.
+
+Sections:
+
+## Hero
+
+Large modern hero.
+
+Include:
+
+* Headline
+* Trust statement
+* Appointment CTA
+* Emergency CTA
+* Hospital image/video
+
+Add:
+
+* Animated counters
+* Floating healthcare cards
+
+Example metrics:
+
+* Patients Served
+* Specialists
+* Departments
+* Years of Service
+
+---
+
+## Services Overview
+
+Modern service cards.
+
+Include icons.
+
+---
+
+## Doctors Preview
+
+Featured doctors.
+
+Professional cards.
+
+Specializations.
+
+Book Appointment button.
+
+---
+
+## Why Choose Us
+
+Modern grid.
+
+Highlight:
+
+* Advanced Technology
+* Expert Specialists
+* 24/7 Emergency
+* Patient-Centered Care
+
+---
+
+## Patient Testimonials
+
+Carousel.
+
+Ratings.
+
+Success stories.
+
+---
+
+## Hospital Facilities
+
+Image gallery.
+
+Interactive layout.
+
+---
+
+## Insurance Partners
+
+Scrolling logo section.
+
+---
+
+## CTA Section
+
+Appointment booking.
+
+Emergency contact.
+
+---
+
+# About Us
+
+Include:
+
+* Hospital Story
+* Mission
+* Vision
+* Core Values
+* Leadership Team
+* Achievements
+* Certifications
+* Timeline
+
+Modern storytelling design.
+
+---
+
+# Services Module
+
+Create detailed service architecture.
+
+Examples:
+
+## General Medicine
+
+## Specialist Clinics
+
+* Cardiology
+* Neurology
+* Pediatrics
+* Dermatology
+* Orthopedics
+* ENT
+* Ophthalmology
+
+## Diagnostics
+
+## Laboratory
+
+## Radiology
+
+## Surgery
+
+## Maternity
+
+## Pharmacy
+
+Each service page should include:
+
+* Description
+* Benefits
+* Specialists
+* FAQs
+* Appointment CTA
+
+---
+
+# Doctors Module
+
+Create modern doctor directory.
+
+Features:
+
+* Search
+* Filter
+* Specialty filter
+* Experience filter
+* Availability filter
+
+Doctor profile page:
+
+* Photo
+* Biography
+* Qualifications
+* Experience
+* Certifications
+* Availability
+* Appointment button
+
+---
+
+# Appointment System
+
+Create modern booking flow.
+
+Features:
+
+* Select department
+* Select doctor
+* Select date
+* Select time
+* Patient details
+
+Validation.
+
+Success confirmation screen.
+
+---
+
+# Emergency Module
+
+Dedicated emergency page.
+
+Include:
+
+* Emergency contacts
+* Ambulance request
+* Quick access actions
+* Emergency procedures
+
+Prominent throughout website.
+
+---
+
+# Patient Portal UI
+
+Create frontend-ready portal interfaces.
+
+Pages:
+
+## Dashboard
+
+Show:
+
+* Upcoming appointments
+* Prescriptions
+* Medical records
+* Notifications
+
+---
+
+## Medical Records
+
+Modern table design.
+
+---
+
+## Prescriptions
+
+---
+
+## Lab Results
+
+---
+
+## Billing
+
+---
+
+## Profile Management
+
+---
+
+# Telemedicine
+
+Create telehealth module UI.
+
+Include:
+
+* Online consultations
+* Doctor availability
+* Video consultation interface mockup
+
+---
+
+# Health Packages
+
+Modern package cards.
+
+Examples:
+
+* Executive Checkup
+* Family Wellness
+* Corporate Health
+* Senior Citizen Package
+
+Comparison layout.
+
+---
+
+# News & Blog
+
+Healthcare content hub.
+
+Features:
+
+* Categories
+* Search
+* Featured articles
+* Related articles
+
+SEO optimized.
+
+---
+
+# Careers
+
+Modern recruitment section.
+
+Include:
+
+* Open positions
+* Application forms
+* Employee culture
+
+---
+
+# Contact Page
+
+Modern contact experience.
+
+Include:
+
+* Interactive map
+* Contact form
+* Departments
+* Phone numbers
+* Email addresses
+* Operating hours
+
+---
+
+# AI Features (UI Ready)
+
+Create interfaces for:
+
+* AI symptom checker
+* Health assistant chatbot
+* Smart appointment recommendations
+
+Future backend integration ready.
+
+---
+
+# Modern Dashboard Analytics
+
+Create admin dashboard UI.
+
+Metrics:
+
+* Appointments
+* Doctors
+* Patients
+* Revenue
+* Occupancy
+
+Modern SaaS design.
+
+---
+
+# Animation Requirements
+
+Use Framer Motion.
+
+Add:
+
+* Fade in
+* Stagger effects
+* Scroll reveal
+* Hover interactions
+* Card lifts
+* Smooth page transitions
+
+Keep performance optimized.
+
+---
+
+# Mobile Experience
+
+Fully responsive.
+
+Design mobile first.
+
+Optimize:
+
+* Navigation
+* Forms
+* Tables
+* Appointment flow
+
+---
+
+# Accessibility
+
+Meet WCAG standards.
+
+Include:
+
+* Keyboard navigation
+* Proper contrast
+* ARIA labels
+* Screen reader support
+
+---
+
+# SEO
+
+Implement:
+
+* Meta tags
+* Open Graph
+* Structured data
+* Sitemap readiness
+
+Target high search visibility.
+
+---
+
+# Deliverables
+
+1. Audit existing codebase.
+2. Reuse useful logic where possible.
+3. Modernize architecture.
+4. Build complete design system.
+5. Create reusable components.
+6. Create all pages listed above.
+7. Ensure responsiveness.
+8. Implement animations.
+9. Improve performance.
+10. Produce a premium healthcare experience suitable for a leading private hospital.
+
+The final result should feel like a 2026 enterprise healthcare platform rather than a traditional hospital website. Every screen should reflect premium design quality, exceptional UX, trust, and modern healthcare innovation.
