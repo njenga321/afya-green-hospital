@@ -1,0 +1,411 @@
+You are working on an existing, running React application for Afya Green Hospital. The application has already been modernized and most core pages exist. Your task is to perform a production-ready enhancement, content expansion, QA review, and functionality audit across the entire application.
+
+## Priority 1: Branding Assets
+
+### Logo Replacement
+
+* Replace all existing logos with the newly uploaded Afya Green Hospital logo.
+* Update the navbar logo.
+* Update footer logo.
+* Update authentication pages logo.
+* Update loading screens and any branded components.
+* Ensure logo scales correctly on desktop, tablet, and mobile.
+
+### Favicon
+
+* Replace the current favicon with the uploaded logo/favicon asset.
+* Update:
+
+  * favicon.ico
+  * apple-touch-icon
+  * web manifest icons
+  * browser tab icon
+* Verify favicon displays correctly across major browsers.
+
+---
+
+## Priority 2: Leadership & Doctors Images
+
+Replace all placeholder, stock, AI-generated, or existing team images with the uploaded headshots.
+
+### Requirements
+
+* Match each uploaded headshot with the correct doctor/team leader name.
+* Maintain consistent image sizing and aspect ratios.
+* Optimize images for web performance.
+* Generate proper alt text for accessibility.
+* Ensure all profile cards, leadership sections, doctors directories, and profile pages use the updated images.
+
+---
+
+## Priority 3: Doctors Directory & Profile Pages
+
+The Doctors module must be fully functional.
+
+### Doctors Listing Page
+
+Implement:
+
+* Search by doctor name
+* Search by specialty
+* Filter by department
+* Filter by availability
+* Responsive card layout
+
+### Individual Doctor Profile Pages
+
+Create dedicated dynamic profile pages for every doctor.
+
+Each profile should contain:
+
+#### Hero Section
+
+* Doctor photo
+* Full name
+* Specialty
+* Years of experience
+* Call-to-action buttons
+
+#### Professional Information
+
+* Biography
+* Qualifications
+* Certifications
+* Professional memberships
+* Areas of expertise
+
+#### Services Offered
+
+* Detailed list of services
+
+#### Availability
+
+* Consultation schedule
+* Booking CTA
+
+#### FAQ Section
+
+* Doctor-specific FAQs
+
+#### Related Doctors
+
+* Similar specialists
+
+#### Appointment Booking CTA
+
+* Visible throughout page
+
+All doctor cards should link to their respective profile pages.
+
+---
+
+## Priority 4: Blog System Audit
+
+The blog system must be fully functional.
+
+### Fix Blog Rendering
+
+Audit and fix:
+
+* Blog listing page
+* Featured posts
+* Category pages
+* Individual post pages
+* Related articles
+* Pagination
+* Search functionality
+
+### Verify
+
+Every blog card must:
+
+* Open correctly
+* Render content correctly
+* Display images
+* Display author information
+* Display publication dates
+* Display categories
+* Display related content
+
+### SEO
+
+Implement:
+
+* Dynamic page titles
+* Meta descriptions
+* Open Graph tags
+* Structured article schema
+
+---
+
+## Priority 5: Service Pages Expansion
+
+Current service pages are too light on content.
+
+Expand every service page significantly.
+
+### Each Service Page Must Include
+
+#### Overview
+
+Detailed explanation of the service.
+
+#### Conditions Treated
+
+Comprehensive list.
+
+#### Symptoms
+
+Relevant symptoms and warning signs.
+
+#### Diagnostic Procedures
+
+Detailed diagnostics.
+
+#### Treatment Options
+
+Medical and surgical options.
+
+#### Benefits
+
+Patient-focused benefits.
+
+#### Why Choose Afya Green Hospital
+
+Service-specific trust factors.
+
+#### Technology & Equipment
+
+Modern technologies used.
+
+#### Specialist Team
+
+Relevant doctors.
+
+#### Patient Journey
+
+Step-by-step treatment process.
+
+#### Frequently Asked Questions
+
+Minimum 8–12 high-quality FAQs per service.
+
+#### Call To Action
+
+Appointment booking and contact options.
+
+---
+
+## Priority 6: FAQ Enhancement
+
+Audit all FAQs site-wide.
+
+Requirements:
+
+* Expand existing FAQ content.
+* Add meaningful answers.
+* Improve readability.
+* Include healthcare-focused search keywords naturally.
+* Add FAQ schema support for SEO.
+
+Target:
+
+* 8–15 FAQs per major page.
+
+---
+
+## Priority 7: Authentication & Patient Portal
+
+The patient portal must be secured.
+
+### Access Control
+
+Unauthenticated users must NOT access:
+
+* Dashboard
+* Medical Records
+* Appointments
+* Billing
+* Prescriptions
+* Lab Results
+
+### Authentication
+
+Implement:
+
+#### Sign Up
+
+* Full name
+* Email
+* Phone number
+* Password
+* Confirm password
+
+#### Login
+
+* Email
+* Password
+
+#### Forgot Password
+
+* Password reset flow
+
+#### Session Persistence
+
+* Stay logged in
+* Protected routes
+
+### User Experience
+
+* Elegant authentication UI
+* Validation messages
+* Success notifications
+* Error handling
+
+---
+
+## Priority 8: Footer Redesign
+
+Completely redesign the footer.
+
+### Modern Premium Footer
+
+Sections:
+
+#### Brand Area
+
+* Logo
+* Hospital summary
+* Trust statement
+
+#### Quick Links
+
+* Home
+* About
+* Services
+* Doctors
+* Blog
+* Careers
+* Contact
+
+#### Services
+
+Key medical services.
+
+#### Contact Information
+
+* Phone
+* Email
+* Address
+* Emergency contacts
+
+#### Operating Hours
+
+Well-designed schedule section.
+
+#### Newsletter
+
+Subscription form.
+
+#### Social Links
+
+Professional icons.
+
+#### Bottom Bar
+
+* Copyright
+* Privacy Policy
+* Terms of Service
+* Cookie Policy
+
+Add subtle animations and premium styling.
+
+---
+
+## Priority 9: Application-Wide QA & Functionality Audit
+
+Perform a comprehensive audit.
+
+### Verify Every Button
+
+Ensure every button:
+
+* Navigates correctly
+* Performs expected action
+* Has loading states
+* Has error handling
+
+### Verify Every Link
+
+Ensure:
+
+* No broken links
+* No dead routes
+* No placeholder URLs
+
+### Verify Every Form
+
+Ensure:
+
+* Validation works
+* Success states work
+* Error states work
+
+### Verify Responsive Design
+
+Test:
+
+* Mobile
+* Tablet
+* Desktop
+* Large screens
+
+---
+
+## Priority 10: Production Readiness
+
+Prepare the application for production deployment.
+
+### Performance
+
+* Lazy loading
+* Route-based code splitting
+* Image optimization
+* Bundle optimization
+
+### Accessibility
+
+* ARIA labels
+* Keyboard navigation
+* Proper contrast ratios
+* Semantic HTML
+
+### SEO
+
+* Metadata
+* Sitemap readiness
+* Robots.txt
+* Structured data
+
+### Error Handling
+
+* 404 page
+* Error boundaries
+* Fallback states
+
+### Security
+
+* Route protection
+* Input validation
+* Secure authentication flow
+
+### Code Quality
+
+* Remove dead code
+* Remove unused imports
+* Remove placeholder content
+* Refactor duplicate components
+
+### Final Deliverable
+
+The application should be production-ready, fully responsive, professionally branded, content-rich, accessible, SEO-optimized, and free of broken functionality. No placeholder content, broken routes, incomplete pages, dummy buttons, or unfinished components should remain anywhere in the application.

@@ -1,0 +1,3 @@
+- [Afya Green Hospital stack](agh-stack.md) — CRA + React 18 + Tailwind v3 + Framer Motion; lucide-react v1.17.0 has no social icons (use Globe/Link2/Rss/Video)
+- [Auth system design](agh-auth.md) — localStorage-based AuthContext; ProtectedRoute guards /patient-portal; auth pages hide Header/Footer via AppLayout
+- [Doctor images](agh-assets.md) — All 12 doctor headshots in public/doctors/, logo at public/logo.png (not /agh.png)

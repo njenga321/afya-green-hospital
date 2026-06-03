@@ -123,7 +123,7 @@ export default function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 flex-shrink-0">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl overflow-hidden bg-green-50 flex items-center justify-center">
-                <img src="/agh.png" alt="AGH Logo" className="w-full h-full object-contain p-1" />
+                <img src="/logo.png" alt="Afya Green Hospital Logo" className="w-full h-full object-contain p-1" />
               </div>
               <div className="hidden sm:block">
                 <div className="text-sm font-black text-green-700 leading-tight">AFYA GREEN</div>
@@ -210,7 +210,7 @@ export default function Header() {
             >
               <div className="flex items-center justify-between p-5 border-b border-gray-100">
                 <Link to="/" className="flex items-center gap-2">
-                  <img src="/agh.png" alt="AGH" className="w-8 h-8 object-contain" />
+                  <img src="/logo.png" alt="Afya Green Hospital" className="w-8 h-8 object-contain" />
                   <span className="font-black text-green-700 text-sm">AFYA GREEN HOSPITAL</span>
                 </Link>
                 <button onClick={() => setMobileOpen(false)} className="w-8 h-8 flex items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100">
